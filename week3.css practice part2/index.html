@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="site-nav">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Our Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="linkedin-link"
+            aria-label="Visit LinkedIn"
+        >
+            in
+        </a>
+    </header>
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>The King of the Jungle</h1>
+                <p>
+                    The lion is a powerful wild animal known for
+                    its strength, courage, and majestic appearance.
+                </p>
+                <button class="cta-button">
+                    Discover More
+                </button>
+            </div>
+        </section>
+        <section class="about" id="about">
+            <h2>About Us</h2>
+            <img
+                src="lion.jpg"
+                alt="Lion in the wild"
+                class="about-image"
+            >
+            <p>
+                We are passionate about wildlife and nature.
+                Our mission is to educate people about lions,
+                their behavior, and the importance of protecting them.
+            </p>
+            <p>
+                Lions are powerful animals that play an important
+                role in their natural environment. We want to help
+                people understand their lives and protect wildlife.
+            </p>
+            <div class="clear"></div>
+        </section>
+        <section class="services" id="services">
+            <h2>Discover the World of Lions</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <h3>Lion Habitat</h3>
+                    <p>
+                        Learn where lions live and discover
+                        their natural habitats in Africa.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>Lion Diet</h3>
+                    <p>
+                        Discover what lions eat and how
+                        they hunt to survive in the wild.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>Lion Behavior</h3>
+                    <p>
+                        Explore how lions live in groups,
+                        communicate, and protect their families.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="lion-facts">
+            <h2>Amazing Facts About Lions</h2>
+            <div class="facts-container">
+                <div class="fact">
+                    <h3>20 Hours</h3>
+                    <p>
+                        Lions can rest and sleep for up to
+                        20 hours a day.
+                    </p>
+                </div>
+                <div class="fact">
+                    <h3>Social Animals</h3>
+                    <p>
+                        Lions live in family groups
+                        called prides.
+                    </p>
+                </div>
+                <div class="fact">
+                    <h3>Powerful Roar</h3>
+                    <p>
+                        A lion's roar can be heard from
+                        several kilometers away.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="contact" id="contact">
+            <h2>Contact Us</h2>
+            <p>
+                Have a question about lions?
+                Send us a message!
+            </p>
+            <form class="contact-form">
+                <label for="name">Your Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                    required
+                >
+                <label for="email">Your Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                >
+                <label for="message">Your Message</label>
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    placeholder="Write your message here..."
+                    required
+                ></textarea>
+                <button type="submit">
+                    Send Message
+                </button>
+            </form>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <p>© 2026 My Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>

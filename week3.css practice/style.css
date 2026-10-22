@@ -1,0 +1,48 @@
+*{
+box-sizing: border-box;
+padding: 0px;
+margin: 0px;
+}
+
+body {
+    background-color: lightgray;
+    color: darkblue;
+}
+
+ul {
+    background-color: lightblue;
+}
+
+li {
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    color: darkblue;
+}
+
+a:hover {
+    color: red;
+}
+
+a:visited {
+    color: purple;
+}
+
+.contact {
+    float: right;
+}
+img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+p {
+    line-height: 2;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    color: darkgreen;
+}
+

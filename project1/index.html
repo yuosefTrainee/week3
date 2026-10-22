@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>XO Game | Tic Tac Toe</title>
+
+        <!-- Tailwind CSS -->
+        <link rel="stylesheet" href="/style.css">
+    </head>
+
+    <body
+        class="min-h-screen bg-slate-950 text-white flex items-center justify-center p-4">
+
+        <main class="w-full max-w-lg">
+
+            <!-- Header -->
+            <header class="text-center mb-8">
+
+                <h1 class="text-5xl font-black tracking-widest">
+                    <span class="text-cyan-400">X</span>
+                    <span class="text-white">O</span>
+                    <span class="text-purple-400">X</span>
+                </h1>
+
+                <p class="text-slate-400 mt-3">
+                    The Ultimate Tic Tac Toe Game
+                </p>
+
+            </header>
+            <!-- Game Mode Selection -->
+            <div class="mode-selection">
+                <h2>Choose Game Mode</h2>
+
+                <div class="mode-buttons">
+                    <button id="pvp-mode" class="mode-btn active-mode">
+                        👥 Two Players
+                    </button>
+
+                    <button id="pvc-mode" class="mode-btn">
+                        🤖 Play vs Computer
+                    </button>
+                </div>
+            </div>
+
+            <!-- Game Container -->
+            <section
+                class="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-2xl">
+
+                <!-- Players Scoreboard -->
+                <div class="grid grid-cols-2 gap-4 mb-6">
+
+                    <!-- Player X -->
+                    <div id="player-x"
+                        class="player-card active-player rounded-2xl p-4 text-center">
+
+                        <p class="text-cyan-400 text-sm font-semibold">
+                            PLAYER 1
+                        </p>
+
+                        <p class="text-3xl font-bold mt-2 text-cyan-400">X</p>
+
+                        <p id="player-x-name"
+                            class="text-slate-400 text-sm mt-2">
+                            Player X
+                        </p>
+
+                        <div class="mt-3">
+                            <p class="text-slate-400 text-xs">SCORE</p>
+                            <p id="score-x"
+                                class="text-3xl font-bold mt-1">0</p>
+                        </div>
+
+                    </div>
+
+                    <!-- Player O -->
+                    <div id="player-o"
+                        class="player-card rounded-2xl p-4 text-center">
+
+                        <p class="text-purple-400 text-sm font-semibold">
+                            PLAYER 2
+                        </p>
+
+                        <p class="text-3xl font-bold mt-2 text-purple-400">O</p>
+
+                        <p id="player-o-name"
+                            class="text-slate-400 text-sm mt-2">
+                            Player O
+                        </p>
+
+                        <div class="mt-3">
+                            <p class="text-slate-400 text-xs">SCORE</p>
+                            <p id="score-o"
+                                class="text-3xl font-bold mt-1">0</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Current Turn -->
+                <div id="status"
+                    class="text-center mb-5 text-slate-300 font-medium"
+                    aria-live="polite">
+
+                    Player X's turn
+
+                </div>
+
+                <!-- Game Board -->
+                <div id="board"
+                    class="grid grid-cols-3 gap-3"
+                    role="group"
+                    aria-label="Tic Tac Toe game board">
+
+                    <button class="cell"
+                        data-row="0"
+                        data-col="0"
+                        aria-label="Row 1, column 1"></button>
+
+                    <button class="cell"
+                        data-row="0"
+                        data-col="1"
+                        aria-label="Row 1, column 2"></button>
+
+                    <button class="cell"
+                        data-row="0"
+                        data-col="2"
+                        aria-label="Row 1, column 3"></button>
+
+                    <button class="cell"
+                        data-row="1"
+                        data-col="0"
+                        aria-label="Row 2, column 1"></button>
+
+                    <button class="cell"
+                        data-row="1"
+                        data-col="1"
+                        aria-label="Row 2, column 2"></button>
+
+                    <button class="cell"
+                        data-row="1"
+                        data-col="2"
+                        aria-label="Row 2, column 3"></button>
+
+                    <button class="cell"
+                        data-row="2"
+                        data-col="0"
+                        aria-label="Row 3, column 1"></button>
+
+                    <button class="cell"
+                        data-row="2"
+                        data-col="1"
+                        aria-label="Row 3, column 2"></button>
+
+                    <button class="cell"
+                        data-row="2"
+                        data-col="2"
+                        aria-label="Row 3, column 3"></button>
+
+                </div>
+
+                <!-- Restart Button -->
+                <button id="restart"
+                    class="w-full mt-6 bg-gradient-to-r from-cyan-500 to-purple-500
+                hover:opacity-90 active:scale-95 transition rounded-xl
+                py-3 font-bold text-white">
+
+                    Restart Game
+
+                </button>
+
+            </section>
+
+            <!-- Footer -->
+            <footer class="text-center text-slate-500 text-sm mt-6">
+                X O Game
+            </footer>
+
+        </main>
+
+        <!-- JavaScript -->
+        <script type="module" src="/script.js"></script>
+
+    </body>
+
+</html>

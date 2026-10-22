@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+.player-card {
+    background-color: #0f172a;
+    border: 2px solid #1e293b;
+    transition: all 0.3s ease;
+}
+
+.active-player {
+    border-color: #22d3ee;
+    background-color: #164e63;
+}
+
+/* Game Board */
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    width: 100%;
+}
+
+/* Game Cells */
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+    background-color: #1e293b;
+    border: 2px solid #334155;
+    border-radius: 16px;
+
+    font-size: 3rem;
+    font-weight: 800;
+
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.cell:hover:not(:disabled) {
+    background-color: #334155;
+    border-color: #22d3ee;
+    transform: scale(1.03);
+}
+
+.cell:disabled {
+    cursor: not-allowed;
+}
+
+.cell.x {
+    color: #22d3ee;
+}
+
+.cell.o {
+    color: #c084fc;
+}
+
+.cell.winner {
+    background-color: #14532d;
+    border-color: #22c55e;
+    color: #86efac;
+}
+/* Game Mode Selection */
+
+.mode-selection {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.mode-selection h2 {
+    color: #F3F0E7;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.mode-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.mode-btn {
+    padding: 12px 8px;
+    border: 1px solid #55525f;
+    border-radius: 12px;
+    background-color: #1e293b;
+    color: #F3F0E7;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.mode-btn:hover {
+    background-color: #164e63;
+    border-color: #9AA38A;
+}
+
+.mode-btn.active-mode {
+    background-color: #c084fc;
+    border-color: #9AA38A;
+    box-shadow: 0 0 12px #2f356b40;
+}
+
+/* Mobile */
+@media (max-width: 400px) {
+    .cell {
+        font-size: 2.25rem;
+        border-radius: 12px;
+    }
+}
